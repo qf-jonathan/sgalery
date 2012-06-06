@@ -16,7 +16,7 @@ class Modelo{
 		}
 	}
 	
-	public function &query($sql){
+	public function query($sql){
 		$resultado = mysql_query($sql,self::$enlace);
 		return new Dataset($resultado);
 	}
