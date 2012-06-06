@@ -1,0 +1,49 @@
+/* 
+    Document   : estilos
+    Created on : 06/06/2012, 06:03:36 AM
+    Author     : jonathan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#cabesera, #pie, #contenedor{
+	position: absolute;
+	left:0; right: 0;
+}
+
+#titulo{
+	font-family: sans-serif;
+	margin: 10px;
+	text-align: center; color: white;
+}
+
+#cabesera{
+	position:absolute;
+	top:0; height: 40px;
+	background: black;
+}
+
+#contenedor{
+	top:40px; bottom:100px;
+	background: lightblue;
+}
+
+#pie{
+	bottom: 0; height:150px;
+	background: black;
+}
+
+#navegador{
+	position: absolute;
+	left:5px; right: 310px; bottom: 5px; height: 140px;
+	background: blue;
+}
+#subir{
+	position: absolute;
+	right: 5px; bottom: 5px; width: 300px; height: 140px;
+	background: blue;
+}
