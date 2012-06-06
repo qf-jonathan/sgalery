@@ -16,8 +16,13 @@ class Modelo{
 		}
 	}
 	
-	public function query($sql){
-		return mysql_query($sql,self::$enlace);
+	public function &query($sql){
+		$resultado = mysql_query($sql,self::$enlace);
+		return new Dataset($resultado);
+	}
+	
+	public static function ultimo_id(){
+		return mysql_insert_id(self::$enlace);
 	}
 
 }

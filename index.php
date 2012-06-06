@@ -1,6 +1,7 @@
 <?php
 
 include 'base/controlador.php';
+include 'base/dataset.php';
 include 'base/modelo.php';
 
 $controlador = isset($_GET['c'])?$_GET['c']:'main';
