@@ -6,7 +6,7 @@ class Modelo{
 	
 	public function __construct(){
 		if(self::$enlace===NULL){
-			include 'configuracion.php';
+			include 'configuracion/configuracion.php';
 			self::$enlace=mysql_connect(
 				$database['dbhost'],
 				$database['dbuser'],
