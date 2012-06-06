@@ -12,4 +12,6 @@ $nombre_controlador=ucfirst($controlador).'_Controlador';
 $nombre_accion=$accion.'_accion';
 
 $app=new $nombre_controlador;
-$app->$nombre_accion(); 
+$app->$nombre_accion();
+
+//gggggg
