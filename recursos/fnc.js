@@ -58,8 +58,6 @@ window.onload=function(){
 				prueba:'jonathan'
 			},
 			exito:function(t){
-				//alert(t.msg);
-				//alert(t);
 				_('#contenedor').innerHTML+=t.msg;
 				_('#contenedor').innerHTML+=t.msg;
 			},
@@ -68,4 +66,13 @@ window.onload=function(){
 			}
 		});
 	}
+	
+	var ifr=document.createElement('iframe');
+	ifr.style.display='none';
+	ifr.src='index.php?c=main&a=prueba';
+	ifr.onload=function(){
+		alert('cargado');
+	}
+	_('#contenedor').appendChild(ifr);
+	//document.body.appendChild(ifr);
 }

@@ -4,7 +4,7 @@ class Accion_Controlador extends Controlador {
 
 	public function __construct() {
 		parent::__construct();
-		header('Content-Type: application/x-json');
+		header('Content-Type: application/json');
 	}
 	
 	public function guardar_imagen_accion(){

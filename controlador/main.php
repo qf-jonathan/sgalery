@@ -9,8 +9,8 @@ class Main_Controlador extends Controlador{
 	public function index_accion(){
 		//$res=$this->mdl->saludo();
 		//$this->cargar_vista('principal',$res);
-		sleep(2);
-		echo json_encode(array('msg'=>$_POST['prueba']));
+		//sleep(2);
+		$this->json(array('msg'=>$_POST['prueba'].' '));
 	}
 	
 	public function shen_accion(){
@@ -23,5 +23,8 @@ class Main_Controlador extends Controlador{
 	public function ver_imagen_action(){
 		
 	}
-	
+	public function prueba_accion(){
+		sleep(2);
+		echo "hola";
+	}
 }
