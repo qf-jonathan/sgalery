@@ -7,6 +7,8 @@ include 'base/modelo.php';
 $controlador = isset($_GET['c'])?$_GET['c']:'galeria';
 $accion = isset($_GET['a'])?$_GET['a']:'index';
 
+if(!file_exists('controlador/'.$controlador.'.php'))
+	die('Error, no existe el controlador');
 include 'controlador/'.$controlador.'.php';
 
 $nombre_controlador=ucfirst($controlador).'_Controlador';
