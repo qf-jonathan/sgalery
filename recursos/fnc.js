@@ -22,8 +22,8 @@ function ajax(cfg){
 			if(xh.status==200){
 				if(cfg.exito!==undefined){
 					if(cfg.tipodato!==undefined && cfg.tipodato.toUpperCase()=='JSON'){
-						eval('var dato='+xh.responseText);
-						cfg.exito(dato);
+						eval('var json='+xh.responseText);
+						cfg.exito(json);
 					}else{
 						cfg.exito(xh.responseText);
 					}
@@ -72,7 +72,13 @@ window.onload=function(){
 	ifr.src='index.php?c=main&a=prueba';
 	ifr.onload=function(){
 		alert('cargado');
+		_('#contenedor').removeChild(ifr);
 	}
-	_('#contenedor').appendChild(ifr);
+	document.body.appendChild(ifr);
+	_('#subir').onclick=function(){
+		alert(ifr.clientWidth);
+		alert(ifr.clientHeight);
+	}
+	
 	//document.body.appendChild(ifr);
 }
