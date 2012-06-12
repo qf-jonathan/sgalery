@@ -3,7 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Galería de Imágenes</title>
-		<link rel="stylesheet" type="text/css" href="recursos/estilos.css"> 
+		<link rel="stylesheet" type="text/css" href="recursos/estilos.css">
+		<script type="text/javascript" src="recursos/fnc.js"></script>
     </head>
     <body>
 		<div id="cabesera">
