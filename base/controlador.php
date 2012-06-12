@@ -3,6 +3,10 @@
 class Controlador{
 
 	private static $singleton_modelos=array();
+	
+	public function __construct() {
+		;
+	}
 
 	public function post($elemento){
 		if(isset($_POST[$elemento]))
@@ -29,6 +33,11 @@ class Controlador{
 		extract($vars);
 		include 'vista/'.$vista.'.php';
 		
+	}
+	
+	public function json($datos){
+		header('Content-Type: application/x-json');
+		echo json_encode($datos);
 	}
 	
 }
