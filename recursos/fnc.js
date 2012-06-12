@@ -49,31 +49,23 @@ function _(sel){
 }
 
 window.onload=function(){
-	ajax({
-		tipo:'post',
-		url:'index.php?c=main&a=index',
-		tipodato:'json',
-		datos:{
-			prueba:'jonathan'
-		},
-		//tipodato:'json',
-		antes:function(){
-			alert('antes');
-		},
-		proceso:function(){
-			alert('proceso');
-		},
-		exito:function(t){
-			//alert(t.msg);
-			//alert(t);
-			_('#contenedor').innerHTML=t.msg;
-			_('#contenedor').innerHTML+=t.msg;
-		},
-		despues:function(){
-			alert('fin');
-		},
-		error:function(e){
-			alert('error: '+e);
-		}
-	});
+	_('#titulo').onclick=function(){
+		ajax({
+			tipo:'post',
+			url:'index.php?c=main&a=index',
+			tipodato:'json',
+			datos:{
+				prueba:'jonathan'
+			},
+			exito:function(t){
+				//alert(t.msg);
+				//alert(t);
+				_('#contenedor').innerHTML+=t.msg;
+				_('#contenedor').innerHTML+=t.msg;
+			},
+			error:function(e){
+				alert('error: '+e);
+			}
+		});
+	}
 }
